@@ -14,7 +14,10 @@
 
 //--> com/jec/onsoft/glasscat/metadata/util
 export {GlassCatMetadataContext} from "./metadata/context/GlassCatMetadataContext";
+//--> com/jec/onsoft/glasscat/metadata/exception
+export {GlassCatMetadataValidationError} from "./metadata/exception/GlassCatMetadataValidationError";
 //--> com/jec/onsoft/glasscat/metadata/util
 export {GlassCatMetadataFactory} from "./metadata/util/GlassCatMetadataFactory";
+export {GlassCatMetadataValidator} from "./metadata/util/GlassCatMetadataValidator";
 //--> com/jec/onsoft/glasscat/metadata
 export {GlassCatMetadata} from "./metadata/GlassCatMetadata";

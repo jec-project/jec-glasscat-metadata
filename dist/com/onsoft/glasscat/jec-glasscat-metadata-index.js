@@ -2,7 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var GlassCatMetadataContext_1 = require("./metadata/context/GlassCatMetadataContext");
 exports.GlassCatMetadataContext = GlassCatMetadataContext_1.GlassCatMetadataContext;
+var GlassCatMetadataValidationError_1 = require("./metadata/exception/GlassCatMetadataValidationError");
+exports.GlassCatMetadataValidationError = GlassCatMetadataValidationError_1.GlassCatMetadataValidationError;
 var GlassCatMetadataFactory_1 = require("./metadata/util/GlassCatMetadataFactory");
 exports.GlassCatMetadataFactory = GlassCatMetadataFactory_1.GlassCatMetadataFactory;
+var GlassCatMetadataValidator_1 = require("./metadata/util/GlassCatMetadataValidator");
+exports.GlassCatMetadataValidator = GlassCatMetadataValidator_1.GlassCatMetadataValidator;
 var GlassCatMetadata_1 = require("./metadata/GlassCatMetadata");
 exports.GlassCatMetadata = GlassCatMetadata_1.GlassCatMetadata;

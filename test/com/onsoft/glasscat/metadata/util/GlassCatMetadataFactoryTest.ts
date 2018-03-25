@@ -21,6 +21,7 @@ import { GlassCatMetadataContext } from "../../../../../../src/com/onsoft/glassc
 import { GlassCatMetadataFactory } from "../../../../../../src/com/onsoft/glasscat/metadata/util/GlassCatMetadataFactory";
 import { SingletonError } from "jec-commons";
 
+// TODO: replace by the "jec-commons" UUID validator
 const UUID_VALIDATOR:any = require("uuid-validate");
 
 @TestSuite({
