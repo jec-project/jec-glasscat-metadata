@@ -12,5 +12,9 @@
  * Please maintain package and alphabetical order!
  */
 
+//--> com/jec/onsoft/glasscat/metadata/util
+export {GlassCatMetadataContext} from "./metadata/context/GlassCatMetadataContext";
+//--> com/jec/onsoft/glasscat/metadata/util
+export {GlassCatMetadataFactory} from "./metadata/util/GlassCatMetadataFactory";
 //--> com/jec/onsoft/glasscat/metadata
 export {GlassCatMetadata} from "./metadata/GlassCatMetadata";
