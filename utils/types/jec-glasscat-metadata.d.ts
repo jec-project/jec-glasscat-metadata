@@ -9,4 +9,6 @@ declare module "jec-glasscat-metadata" {
 
 /// <reference types="node" />
 
+import { Singleton } from "jec-commons";
+
 /*PLACEHOLDER*/}
