@@ -42,10 +42,11 @@
     "grunt-mocha-test": "^0.13.2",
     "grunt-ts": "^6.0.0-beta.17",
     "grunt-typedoc": "^0.2.4",
-    "mocha": "^3.3.0",
     "jec-juta": "^1.1.7",
     "jec-tiger": "^1.1.8",
+    "mocha": "^3.3.0",
     "typedoc": "^0.8.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "uuid-validate": "0.0.2"
   }
 }
