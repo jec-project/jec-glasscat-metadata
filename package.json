@@ -29,7 +29,9 @@
   },
   "homepage": "https://github.com/pechemann/jec-glasscat-metadata#readme",
   "dependencies": {
-    "jec-commons": "^1.1.8"
+    "jec-commons": "^1.1.8",
+    "semver": "^5.5.0",
+    "uuid-validate": "0.0.2"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.41",
@@ -46,7 +48,6 @@
     "jec-tiger": "^1.1.8",
     "mocha": "^3.3.0",
     "typedoc": "^0.8.0",
-    "typescript": "^2.6.2",
-    "uuid-validate": "0.0.2"
+    "typescript": "^2.6.2"
   }
 }

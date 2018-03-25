@@ -15,36 +15,47 @@
 //   limitations under the License.
 
 import {GlassCatMetadata} from "../GlassCatMetadata";
-import {GlobalGuidGenerator} from "jec-commons";
-import {GlassCatMetadataContext} from "../context/GlassCatMetadataContext";
+
+// TODO: replace by the "jec-commons" UUID validator
+const UUID_VALIDATOR:any = require("uuid-validate");
+const SEMVER:any = require('semver');
 
 /**
- * Creates new <code>GlassCatMetadata</code> instances.
+ * Checks for valid <code>GlassCatMetadata</code> instances.
  */
-export class GlassCatMetadataFactory {
+export class GlassCatMetadataValidator {
   
   //////////////////////////////////////////////////////////////////////////////
   // Constructor function
   //////////////////////////////////////////////////////////////////////////////
   
   /**
-   * Creates a new <code>GlassCatMetadataFactory</code> instance.
+   * Creates a new <code>GlassCatMetadataValidator</code> instance.
    */
   constructor() {}
-  
+
   //////////////////////////////////////////////////////////////////////////////
   // Public methods
   //////////////////////////////////////////////////////////////////////////////
 
   /**
-   * Creates and returns a new <code>GlassCatMetadata</code> instance.
+   * Returns a boolean that indicates whether the specified
+   * <code>GlassCatMetadata</code> object is valid (<code>true</code>), or not
+   * (<code>false</code>).
+   * 
+   * @param {GlassCatMetadata} metadata the <code>GlassCatMetadata</code> object
+   *                                    to validate.
+   * @return {boolean} <code>true</code> whether <code>metadata</code> is valid;
+   *                   <code>false</code> otherwise.
    */
-  public create():GlassCatMetadata {
-    const metadata:GlassCatMetadata = new GlassCatMetadata();
-    const date:Date = new Date();
-    metadata.id = GlobalGuidGenerator.getInstance().generate();
-    metadata.creation = date.toString();
-    metadata.version = GlassCatMetadataContext.getInstance().getVersion();
-    return metadata;
+  public validate(metadata:GlassCatMetadata):boolean {
+    let isValid:boolean = UUID_VALIDATOR(metadata.id, 4);
+    if(isValid) {
+      isValid = SEMVER.valid(metadata.version) !== null;
+      if(isValid) {
+        isValid = !isNaN(Date.parse(metadata.creation));
+      }
+    }
+    return isValid;
   }
 }

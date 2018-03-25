@@ -7,8 +7,6 @@
 
 declare module "jec-glasscat-metadata" {
 
-/// <reference types="node" />
-
 import { Singleton } from "jec-commons";
 
 export class GlassCatMetadataContext implements Singleton {    constructor();    private static INSTANCE;    private static _locked;    static getInstance(): GlassCatMetadataContext;    private initObj();    private _version;    private _id;    getVersion(): string;    setVersion(version: string): void;    getId(): string;}export class GlassCatMetadataValidationError extends Error {    constructor(message: string);}export class GlassCatMetadata {    constructor();    id: string;    creation: string;    version: string;}export class GlassCatMetadataFactory {    constructor();    create(): GlassCatMetadata;}export class GlassCatMetadataValidator {    constructor();    validate(metadata: GlassCatMetadata): boolean;}}
