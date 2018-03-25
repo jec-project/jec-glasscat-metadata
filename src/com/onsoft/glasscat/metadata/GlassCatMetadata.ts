@@ -48,5 +48,4 @@ export class GlassCatMetadata {
    * The GlassCat server version.
    */
   public version:string = null;
-  
 }

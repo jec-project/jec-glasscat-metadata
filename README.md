@@ -25,9 +25,13 @@ $ npm install jec-glasscat-metadata --save
 All JEC GlassCat Metadata components have to be imported with the ES6 syntax:
 
 ```javascript
-import { FilePropertiesBuilder } from "jec-glasscat-metadata";
+import { GlassCatMetadataFactory, GlassCatMetadata, GlassCatMetadataValidator } from "jec-glasscat-metadata";
 
-const BUILDER:FilePropertiesBuilder = new FilePropertiesBuilder();
+const factory:GlassCatMetadataFactory = new GlassCatMetadataFactory();
+const metadata:GlassCatMetadata = factory.create();
+const validator:GlassCatMetadataValidator = new GlassCatMetadataValidator();
+
+console.log(validator.validate(metadata)); // true
 ```
 
 For a complete list of available components, please refer to the [API Reference](#api-reference) documentation.
