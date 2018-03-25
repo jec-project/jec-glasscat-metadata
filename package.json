@@ -2,7 +2,7 @@
   "name": "jec-glasscat-metadata",
   "version": "1.0.0",
   "description": "Contains utility tools for working with GlassCat server metadata.",
-  "main": "dist/com/onsoft/glasscat/metadata/jec-glasscat-metadata-index",
+  "main": "dist/com/onsoft/glasscat/jec-glasscat-metadata-index",
   "types": "types/jec-glasscat-metadata.d.ts",
   "scripts": {
     "test": "mocha juta/tiger/run-unit-tests"
