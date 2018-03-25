@@ -18,6 +18,8 @@ export {GlassCatMetadataContext} from "./metadata/context/GlassCatMetadataContex
 export {GlassCatMetadataValidationError} from "./metadata/exception/GlassCatMetadataValidationError";
 //--> com/jec/onsoft/glasscat/metadata/util
 export {GlassCatMetadataFactory} from "./metadata/util/GlassCatMetadataFactory";
+export {GlassCatMetadataParser} from "./metadata/util/GlassCatMetadataParser";
 export {GlassCatMetadataValidator} from "./metadata/util/GlassCatMetadataValidator";
 //--> com/jec/onsoft/glasscat/metadata
 export {GlassCatMetadata} from "./metadata/GlassCatMetadata";
+export {GlassCatMetadataGenerator} from "./metadata/GlassCatMetadataGenerator";
