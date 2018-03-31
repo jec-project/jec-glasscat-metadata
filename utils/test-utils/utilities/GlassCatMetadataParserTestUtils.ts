@@ -22,9 +22,9 @@
 // Utilities:
 export const FILE:string = `{
   "id":"4d2722f2-1851-4fb2-afb8-6567689ee03e",
-  "creation":"Sun Mar 25 2018 13:11:56 GMT+0200 (Paris, Madrid (heure d’été))",
+  "creation":1522261232282,
   "version":"1.0.0"
 }`;
 export const ID:string = "4d2722f2-1851-4fb2-afb8-6567689ee03e";
-export const CREATION:string = "Sun Mar 25 2018 13:11:56 GMT+0200 (Paris, Madrid (heure d’été))";
+export const CREATION:number = 1522261232282;
 export const VERSION:string = "1.0.0";

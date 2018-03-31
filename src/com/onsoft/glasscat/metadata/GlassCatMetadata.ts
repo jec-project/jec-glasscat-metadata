@@ -39,10 +39,10 @@ export class GlassCatMetadata {
   public id:string = null;
   
   /**
-   * A string that represents the GlassCat server creation date, as returned by
-   * a new <code>Date</code> object.
+   * A timestamp that represents the GlassCat server creation date, as defined 
+   * by a new <code>Date</code> object.
    */
-  public creation:string = null;
+  public creation:number = -1;
   
   /**
    * The GlassCat server version.

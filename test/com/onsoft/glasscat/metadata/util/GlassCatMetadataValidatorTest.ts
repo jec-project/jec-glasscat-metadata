@@ -86,7 +86,7 @@ export class GlassCatMetadataValidatorTest {
   }
   
   @Test({
-    description: "should return 'false' if 'creation' is 'null'"
+    description: "should return 'false' if 'creation' is '-1'"
   })
   public creationNullTest():void {
     GlassCatMetadataContext.getInstance().setVersion(this.VERSION);
@@ -98,14 +98,26 @@ export class GlassCatMetadataValidatorTest {
   }
   
   @Test({
-    description: "should return 'false' if 'creation' is not valid"
+    description: "should return 'false' if 'creation' is equal to 'NaN'"
   })
   public creationInvalidTest():void {
     GlassCatMetadataContext.getInstance().setVersion(this.VERSION);
     const validator:GlassCatMetadataValidator = new GlassCatMetadataValidator();
     const factory:GlassCatMetadataFactory = new GlassCatMetadataFactory();
     const metadata:GlassCatMetadata = factory.create();
-    metadata.creation = "tomorow";
+    metadata.creation = -1;
+    expect(validator.validate(metadata)).to.be.false;
+  }
+
+  @Test({
+    description: "should return 'false' if 'creation' is equal to '-1'"
+  })
+  public creationNaNTest():void {
+    GlassCatMetadataContext.getInstance().setVersion(this.VERSION);
+    const validator:GlassCatMetadataValidator = new GlassCatMetadataValidator();
+    const factory:GlassCatMetadataFactory = new GlassCatMetadataFactory();
+    const metadata:GlassCatMetadata = factory.create();
+    metadata.creation = NaN;
     expect(validator.validate(metadata)).to.be.false;
   }
 }

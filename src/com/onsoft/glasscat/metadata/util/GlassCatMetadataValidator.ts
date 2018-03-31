@@ -49,11 +49,12 @@ export class GlassCatMetadataValidator {
    *                   <code>false</code> otherwise.
    */
   public validate(metadata:GlassCatMetadata):boolean {
+    const creation:number = metadata.creation;
     let isValid:boolean = UUID_VALIDATOR(metadata.id, 4);
     if(isValid) {
       isValid = SEMVER.valid(metadata.version) !== null;
       if(isValid) {
-        isValid = !isNaN(Date.parse(metadata.creation));
+        isValid = creation && !isNaN(creation) && creation !== -1;
       }
     }
     return isValid;

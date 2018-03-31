@@ -9,7 +9,7 @@ class GlassCatMetadataValidator {
         if (isValid) {
             isValid = SEMVER.valid(metadata.version) !== null;
             if (isValid) {
-                isValid = !isNaN(Date.parse(metadata.creation));
+                isValid = !isNaN(metadata.creation);
             }
         }
         return isValid;

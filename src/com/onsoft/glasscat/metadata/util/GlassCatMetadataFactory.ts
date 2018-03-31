@@ -41,9 +41,8 @@ export class GlassCatMetadataFactory {
    */
   public create():GlassCatMetadata {
     const metadata:GlassCatMetadata = new GlassCatMetadata();
-    const date:Date = new Date();
     metadata.id = GlobalGuidGenerator.getInstance().generate();
-    metadata.creation = date.toString();
+    metadata.creation = Date.now();
     metadata.version = GlassCatMetadataContext.getInstance().getVersion();
     return metadata;
   }
