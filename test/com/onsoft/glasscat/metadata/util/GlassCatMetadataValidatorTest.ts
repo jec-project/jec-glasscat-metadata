@@ -86,7 +86,7 @@ export class GlassCatMetadataValidatorTest {
   }
   
   @Test({
-    description: "should return 'false' if 'creation' is '-1'"
+    description: "should return 'false' if 'creation' is 'null'"
   })
   public creationNullTest():void {
     GlassCatMetadataContext.getInstance().setVersion(this.VERSION);
@@ -98,7 +98,7 @@ export class GlassCatMetadataValidatorTest {
   }
   
   @Test({
-    description: "should return 'false' if 'creation' is equal to 'NaN'"
+    description: "should return 'false' if 'creation' is '-1'"
   })
   public creationInvalidTest():void {
     GlassCatMetadataContext.getInstance().setVersion(this.VERSION);
@@ -110,7 +110,7 @@ export class GlassCatMetadataValidatorTest {
   }
 
   @Test({
-    description: "should return 'false' if 'creation' is equal to '-1'"
+    description: "should return 'false' if 'creation' is 'NaN'"
   })
   public creationNaNTest():void {
     GlassCatMetadataContext.getInstance().setVersion(this.VERSION);

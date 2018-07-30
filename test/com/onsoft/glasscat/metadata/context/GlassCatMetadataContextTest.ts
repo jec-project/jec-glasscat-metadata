@@ -40,7 +40,7 @@ export class GlassCatMetadataContextTest {
     description: "should throw a singleton error when calling the constructor function"
   })
   public newInstanceTest():void {
-    let buildInstance:Function = function():void {
+    const buildInstance:Function = function():void {
       new GlassCatMetadataContext();
     };
     expect(buildInstance).to.throw(SingletonError);
@@ -50,7 +50,7 @@ export class GlassCatMetadataContextTest {
     description: "should return a GlassCatMetadataContext instance"
   })
   public getInstanceTest():void {
-    let context:GlassCatMetadataContext =
+    const context:GlassCatMetadataContext =
                                      GlassCatMetadataContext.getInstance();
     expect(context).to.be.an.instanceOf(GlassCatMetadataContext);
   }
@@ -59,9 +59,9 @@ export class GlassCatMetadataContextTest {
     description: "should return a singleton reference"
   })
   public singletonTest():void {
-    let context1:GlassCatMetadataContext =
+    const context1:GlassCatMetadataContext =
                                      GlassCatMetadataContext.getInstance();
-    let context2:GlassCatMetadataContext =
+    const context2:GlassCatMetadataContext =
                                      GlassCatMetadataContext.getInstance();
     expect(context1).to.equal(context2);
   }

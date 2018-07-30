@@ -14,7 +14,7 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-import { TestSuite, Test, Before, After } from "jec-juta";
+import { TestSuite, Test } from "jec-juta";
 import { expect } from "chai";
 import { GlassCatMetadataGenerator } from "../../../../../src/com/onsoft/glasscat/metadata/GlassCatMetadataGenerator";
 import { GlassCatMetadata } from "../../../../../src/com/onsoft/glasscat/metadata/GlassCatMetadata";
@@ -35,7 +35,7 @@ export class GlassCatMetadataGeneratorTest {
     description: "should throw an exception if 'version' parameter is 'null'"
   })
   public nullVersionTest():void {
-    let buildGenerator:Function = function():void {
+    const buildGenerator:Function = function():void {
       new GlassCatMetadataGenerator(null);
     };
     expect(buildGenerator).to.throw(GlassCatMetadataValidationError);
@@ -45,7 +45,7 @@ export class GlassCatMetadataGeneratorTest {
     description: "should throw an exception if 'version' parameter is not valid"
   })
   public invalidVersionTest():void {
-    let buildGenerator:Function = function():void {
+    const buildGenerator:Function = function():void {
       new GlassCatMetadataGenerator("invalid");
     };
     expect(buildGenerator).to.throw(GlassCatMetadataValidationError);
@@ -80,7 +80,7 @@ export class GlassCatMetadataGeneratorTest {
                                     new GlassCatMetadataGenerator(this.VERSION);
     const file:string = generator.generateFile();
     const parsed:any = JSON.parse(file);
-    const creation:number = Date.parse(parsed.creation); 
+    const creation:number = parseInt(parsed.creation); 
     expect(parsed.version).to.equal(this.VERSION);
     expect(isNaN(creation)).to.be.false;
     expect(UUID_VALIDATOR(parsed.id, 4)).to.be.true;

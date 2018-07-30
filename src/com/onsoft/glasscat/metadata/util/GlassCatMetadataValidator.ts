@@ -54,7 +54,7 @@ export class GlassCatMetadataValidator {
     if(isValid) {
       isValid = SEMVER.valid(metadata.version) !== null;
       if(isValid) {
-        isValid = creation && !isNaN(creation) && creation !== -1;
+        isValid = creation !== null && !isNaN(creation) && creation !== -1;
       }
     }
     return isValid;

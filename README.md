@@ -1,5 +1,10 @@
 # JEC GlassCat Metadata Project
 
+[![JEC version](https://img.shields.io/badge/JEC-1.0-%23ba00ff.svg)](http://jecproject.org)
+[![GlassCat version](https://img.shields.io/badge/GlassCat-1.0-%230a50ff.svg)](http://jecproject.org)
+[![npm version](https://badge.fury.io/js/jec-glasscat-metadata.svg)](https://www.npmjs.com/package/jec-glasscat-metadata)
+[![Apache 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+
 JEC GlassCat Metadata is a [JavaScript Enterprise Container][jec-url] project which provides utility tools for working with GlassCat server metadata.
 
 [![][jec-logo]][jec-url]
@@ -59,7 +64,7 @@ The documentation generator is [TypeDoc](http://typedoc.org/)
 
 ## Update Release Notes
 
-**Current stable release:** [1.0.2](CHANGELOG.md#jec-glasscat-metadata-1.0.2)
+**Current stable release:** [1.0.4](CHANGELOG.md#jec-glasscat-metadata-1.0.4)
  
 For a complete listing of release notes for all JEC GlassCat Metadata update releases, see the [CHANGELOG](CHANGELOG.md) file. 
 

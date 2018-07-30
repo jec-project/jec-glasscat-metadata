@@ -38,10 +38,10 @@ export class GlassCatMetadataTest {
   }
   
   @Test({
-    description: "should have a 'creation' property set to 'null'"
+    description: "should have a 'creation' property set to '-1'"
   })
   public creationTest():void {
-    expect(this.metadata).to.have.property("creation", null);
+    expect(this.metadata).to.have.property("creation", -1);
   }
   
   @Test({
